@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/abstract_layer/Entity.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Warrior.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Dragon.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/abstract_layer/Itemiser.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Mage.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Weaponiser.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Bear.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Armor.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Ghost.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Weapon.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/abstract_layer/Item.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/abstract_layer/PlayerCharacter.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Armoriser.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Assasin.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/concrete/Jeweliser.java</file>
+            <file>file:/D:/Projects/NetBeans%20WorkSpace/CENG431_HW3/src/ceng431_hw3/CENG431_HW3.java</file>
+        </group>
+    </open-files>
+</project-private>

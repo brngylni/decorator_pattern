@@ -1,0 +1,286 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": false,
+    "cutTests": false,
+    "cutClient": false,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": false,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "ceng431_hw3.CENG431_HW3",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1830418700 { 
+   	label=abstract_layer
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Item2127752122[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Item</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   bonuses: double[] [0..*]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Itemiser2127752122[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Itemiser</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   character: PlayerCharacter [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   items: List&lt;Item&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addItem(item: Item)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusArmor(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusDamage(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusHealth(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusMana(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getArmor(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getDamage(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getHealth(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getLevel(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getMana(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ removeItem(item: Item)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ takeDamage(damage: double)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+PlayerCharacter2127752122[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)PlayerCharacter</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   armor: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   damage: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   description: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   gold: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   health: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   level: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   mana: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   x: double [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   y: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ attack(target: Entity)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ duel(target: Entity)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getArmor(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getDamage(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getDescription(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getGold(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getHealth(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getLevel(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getMana(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getX(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getY(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ move(x: double, y: double)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ takeDamage(damage: double)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1894385956 { 
+   	label=ceng431_hw3
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   CENG431_HW31894385956[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CENG431_HW3</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_582643067 { 
+   	label=concrete
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Armor1678932649[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Armor</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Armoriser1678932649[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Armoriser</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calculateBonusArmor(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusDamage(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusHealth(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusMana(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ duel(target: Entity)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getDescription(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Jewelery1678932649[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Jewelery</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Jeweliser1678932649[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Jeweliser</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calculateBonusArmor(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusDamage(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusHealth(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusMana(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ duel(target: Entity)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getDescription(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Weapon1678932649[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Weapon</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Weaponiser1678932649[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Weaponiser</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calculateBonusArmor(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusDamage(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusHealth(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ calculateBonusMana(): double</TD></TR>
+<TR><TD ALIGN="LEFT" >+ duel(target: Entity)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getDescription(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+Item2127752122 -> Armor1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Item2127752122 -> Jewelery1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Item2127752122 -> Weapon1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Itemiser2127752122 -> Armoriser1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Itemiser2127752122 -> Item2127752122[label="items
+[0..*]"];
+Itemiser2127752122 -> Jeweliser1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Itemiser2127752122 -> PlayerCharacter2127752122[label="character
+[0..1]"];
+Itemiser2127752122 -> Weaponiser1678932649[arrowhead=none, arrowtail=empty, dir=both];
+PlayerCharacter2127752122 -> Itemiser2127752122[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml

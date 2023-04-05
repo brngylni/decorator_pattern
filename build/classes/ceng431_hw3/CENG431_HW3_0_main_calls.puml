@@ -1,0 +1,458 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "ceng431_hw3.CENG431_HW3#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": false,
+    "cutTests": false,
+    "cutClient": false,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": false,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "TypesAndMethods", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "ceng431_hw3.CENG431_HW3",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1830418700 { 
+   	label=abstract_layer
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Item2127752122[
+	label="(C)Item"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Itemiser2127752122[
+	label="(C)Itemiser"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Monster2127752122[
+	label="(C)Monster"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+PlayerCharacter2127752122[
+	label="(C)PlayerCharacter"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+subgraph cluster_121773646 { 
+   	label=Itemiser
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Itemiser2127752122XXXaddItem2289459[
+	label="+ addItem()"
+	style=filled
+	fillcolor=white
+	tooltip="Itemiser
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_529091456 { 
+   	label=PlayerCharacter
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PlayerCharacter2127752122XXXattack2080559107[
+	label="+ attack()"
+	style=filled
+	fillcolor=white
+	tooltip="PlayerCharacter
+
+null"
+	fontcolor=darkgreen
+];
+
+PlayerCharacter2127752122XXXduel2080559107[
+	label="+ duel()"
+	style=filled
+	fillcolor=white
+	tooltip="PlayerCharacter
+
+null"
+	fontcolor=darkgreen
+];
+
+PlayerCharacter2127752122XXXgetHealth0[
+	label="+ getHealth()"
+	style=filled
+	fillcolor=white
+	tooltip="PlayerCharacter
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_1894385956 { 
+   	label=ceng431_hw3
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1091057974 { 
+   	label=CENG431_HW3
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   CENG431_HW31894385956XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="CENG431_HW3
+
+&#10;  @param args the command line arguments&#10; "
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_582643067 { 
+   	label=concrete
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Armor1678932649[
+	label="(C)Armor"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Assasin1678932649[
+	label="(C)Assasin"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Bear1678932649[
+	label="(C)Bear"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Dragon1678932649[
+	label="(C)Dragon"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Ghost1678932649[
+	label="(C)Ghost"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Jewelery1678932649[
+	label="(C)Jewelery"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Mage1678932649[
+	label="(C)Mage"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Warrior1678932649[
+	label="(C)Warrior"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+Weapon1678932649[
+	label="(C)Weapon"
+	style=filled
+	shape=rect
+	fillcolor="#FFFFFF"
+];
+
+subgraph cluster_1541077515 { 
+   	label=Bear
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Bear1678932649XXXgetHealth0[
+	label="+ getHealth()"
+	style=filled
+	fillcolor=white
+	tooltip="Bear
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1541401545 { 
+   	label=Mage
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Mage1678932649XXXduel2080559107[
+	label="+ duel()"
+	style=filled
+	fillcolor=white
+	tooltip="Mage
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1601149045 { 
+   	label=Warrior
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Warrior1678932649XXXduel2080559107[
+	label="+ duel()"
+	style=filled
+	fillcolor=white
+	tooltip="Warrior
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_268391562 { 
+   	label=Weaponiser
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Weaponiser1678932649XXXduel2080559107[
+	label="+ duel()"
+	style=filled
+	fillcolor=white
+	tooltip="Weaponiser
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_533483288 { 
+   	label=Ghost
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Ghost1678932649XXXgetHealth0[
+	label="+ getHealth()"
+	style=filled
+	fillcolor=white
+	tooltip="Ghost
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_653944545 { 
+   	label=Armoriser
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Armoriser1678932649XXXduel2080559107[
+	label="+ duel()"
+	style=filled
+	fillcolor=white
+	tooltip="Armoriser
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_718968150 { 
+   	label=Dragon
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Dragon1678932649XXXgetHealth0[
+	label="+ getHealth()"
+	style=filled
+	fillcolor=white
+	tooltip="Dragon
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_864357665 { 
+   	label=Assasin
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Assasin1678932649XXXduel2080559107[
+	label="+ duel()"
+	style=filled
+	fillcolor=white
+	tooltip="Assasin
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_929593821 { 
+   	label=Jeweliser
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Jeweliser1678932649XXXduel2080559107[
+	label="+ duel()"
+	style=filled
+	fillcolor=white
+	tooltip="Jeweliser
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Armoriser1678932649XXXduel2080559107 -> PlayerCharacter2127752122XXXduel2080559107;
+Assasin1678932649XXXduel2080559107 -> Bear1678932649XXXgetHealth0;
+Assasin1678932649XXXduel2080559107 -> Dragon1678932649XXXgetHealth0;
+Assasin1678932649XXXduel2080559107 -> Ghost1678932649XXXgetHealth0;
+Assasin1678932649XXXduel2080559107 -> PlayerCharacter2127752122XXXattack2080559107;
+Assasin1678932649XXXduel2080559107 -> PlayerCharacter2127752122XXXgetHealth0;
+CENG431_HW31894385956XXXmain1859653459 -> Itemiser2127752122XXXaddItem2289459;
+CENG431_HW31894385956XXXmain1859653459 -> PlayerCharacter2127752122XXXduel2080559107;
+Item2127752122 -> Armor1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Item2127752122 -> Jewelery1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Item2127752122 -> Weapon1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Itemiser2127752122XXXaddItem2289459 -> Item2127752122[label=item, style=dashed];
+Jeweliser1678932649XXXduel2080559107 -> PlayerCharacter2127752122XXXduel2080559107;
+Mage1678932649XXXduel2080559107 -> PlayerCharacter2127752122XXXattack2080559107;
+Monster2127752122 -> Bear1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Monster2127752122 -> Dragon1678932649[arrowhead=none, arrowtail=empty, dir=both];
+Monster2127752122 -> Ghost1678932649[arrowhead=none, arrowtail=empty, dir=both];
+PlayerCharacter2127752122 -> Assasin1678932649[arrowhead=none, arrowtail=empty, dir=both];
+PlayerCharacter2127752122 -> Itemiser2127752122[arrowhead=none, arrowtail=empty, dir=both];
+PlayerCharacter2127752122 -> Mage1678932649[arrowhead=none, arrowtail=empty, dir=both];
+PlayerCharacter2127752122 -> Warrior1678932649[arrowhead=none, arrowtail=empty, dir=both];
+PlayerCharacter2127752122XXXduel2080559107 -> Armoriser1678932649XXXduel2080559107;
+PlayerCharacter2127752122XXXduel2080559107 -> Assasin1678932649XXXduel2080559107;
+PlayerCharacter2127752122XXXduel2080559107 -> Jeweliser1678932649XXXduel2080559107;
+PlayerCharacter2127752122XXXduel2080559107 -> Mage1678932649XXXduel2080559107;
+PlayerCharacter2127752122XXXduel2080559107 -> Monster2127752122[arrowhead=none];
+PlayerCharacter2127752122XXXduel2080559107 -> PlayerCharacter2127752122[arrowhead=none];
+PlayerCharacter2127752122XXXduel2080559107 -> Warrior1678932649XXXduel2080559107;
+PlayerCharacter2127752122XXXduel2080559107 -> Weaponiser1678932649XXXduel2080559107;
+Warrior1678932649XXXduel2080559107 -> PlayerCharacter2127752122XXXattack2080559107;
+Weaponiser1678932649XXXduel2080559107 -> PlayerCharacter2127752122XXXduel2080559107;
+    
+}
+@enduml
